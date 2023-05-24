@@ -5,7 +5,7 @@ from core.models import Post
 
 def frontpage(request):
     posts = Post.objects.all()
-    return render(request, 'core/frontpage.html')
+    return render(request, 'core/frontpage.html', {'post': posts})
 
 
 def about(request):
